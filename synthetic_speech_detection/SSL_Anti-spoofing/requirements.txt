@@ -1,0 +1,4 @@
+librosa==0.9.1
+python-dotenv==1.0.1
+tensorboardX
+wandb
