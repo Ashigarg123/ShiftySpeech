@@ -1,32 +1,3 @@
-## **Getting Started**
-To reproduce the experiments, please follow the following instructions:
-
----
-**Environment Setup**
-```sh
-conda create -n SSL python=3.10.14
-```
-```sh
-conda install pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.1 -c pytorch -c nvidia
-```
-
-Download and install fairseq from [here](https://github.com/facebookresearch/fairseq/tree/a54021305d6b3c4c5959ac9395135f63202db8f1)
-
-```sh
-pip install -r requirements.txt
-```
-Download xlsr model from [here](https://github.com/facebookresearch/fairseq/tree/main/examples/wav2vec/xlsr) and add in /synthetic_speech_detection/SSL_Anti-spoofing/model.py
-
-
-**Evaluation:**
-
-```sh
-python train.py --eval \
-    --test_score_dir <path_to_save_scores> \
-    --model_name SSL-AASIST \
-    --test_list_path <path_to_test_file_with_utterances_and_labels> \
-    --model_path <path_to_model_checkpoint>
-```
 ## Downloading the dataset 
 
 ### ShiftySpeech
@@ -66,11 +37,24 @@ The dataset is structured as follows:
     │
 
 ```
+Source dataset for above synthetic speech can be download using the following links: 
+- [JSUT Basic5000](https://sites.google.com/site/shinnosuketakamichi/publication/jsut)
+- [AISHELL-1](https://www.openslr.org/33/)
+- [VoxCeleb2](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/vox2.html)
+- [Audiobook](https://www.openslr.org/12)
+- [MSP-Podcast](https://ecs.utdallas.edu/research/researchlabs/msp-lab/MSP-Podcast.html)
+- [CommonVoice 19.0](https://commonvoice.mozilla.org/tw/datasets)
 
-##### Downloading the pre-trained models 
+
+Wav list corresponding to the source datasets can be found here : 
+```sh 
+   dataset/wav_lists
+```
+
+## Downloading the pre-trained models 
 
 ```bash 
-gsutil cp -r https://storage.cloud.google.com/ssd_in_the_wild/pre-trained-models/ synthetic_speech_detection/pre-trained/
+gsutil cp -r https://storage.cloud.google.com/ssd_in_the_wild/pre-trained-models/ models/pre-trained/
 ```
 ```plaintext
 pre-trained-models/
@@ -88,24 +72,36 @@ pre-trained-models/
 │   │       ├── ...
 
 ```
-Source dataset for above synthetic speech can be download using the following links: 
-- [JSUT Basic5000](https://sites.google.com/site/shinnosuketakamichi/publication/jsut)
-- [AISHELL-1](https://www.openslr.org/33/)
-- [VoxCeleb2](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/vox2.html)
-- [Audiobook](https://www.openslr.org/12)
-- [MSP-Podcast](https://ecs.utdallas.edu/research/researchlabs/msp-lab/MSP-Podcast.html)
-- [CommonVoice 19.0](https://commonvoice.mozilla.org/tw/datasets)
 
+## Reproducing Experiments 
+To reproduce the experiments, please follow the following instructions:
 
-Wav list corresponding to the source datasets can be found here : 
-```sh 
-   dataset/wav_lists
+---
+**Environment Setup**
+```sh
+conda create -n SSL python=3.10.14
+```
+```sh
+conda install pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.1 -c pytorch -c nvidia
 ```
 
-Follow the following instructions to reproduce results corresponding to different sections
+Download and install fairseq from [here](https://github.com/facebookresearch/fairseq/tree/a54021305d6b3c4c5959ac9395135f63202db8f1)
 
-## Experiments 
+```sh
+pip install -r requirements.txt
+```
+Download xlsr model from [here](https://github.com/facebookresearch/fairseq/tree/main/examples/wav2vec/xlsr) and add in /synthetic_speech_detection/SSL_Anti-spoofing/model.py
 
+
+**Evaluation:**
+
+```sh
+python train.py --eval \
+    --test_score_dir <path_to_save_scores> \
+    --model_name SSL-AASIST \
+    --test_list_path <path_to_test_file_with_utterances_and_labels> \
+    --model_path <path_to_model_checkpoint>
+```
 ### Section 3 
 
 Prepare the data 
@@ -133,6 +129,9 @@ gsutil cp -r https://storage.cloud.google.com/ssd_in_the_wild/pre-trained-models
 
 Evaluate the above downloaded models
 
+```sh
+conda activate SSL
+```
 ```sh
 python train.py --eval \
     --test_score_dir <path_to_save_scores> \
