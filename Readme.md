@@ -9,12 +9,9 @@ conda create -n SSL python=3.10.14
 ```sh
 conda install pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.1 -c pytorch -c nvidia
 ```
-```sh
-cd fairseq-a54021305d6b3c4c5959ac9395135f63202db8f1
-```
-```sh
-pip install --editable ./
-```
+
+Download and install fairseq from [here](https://github.com/facebookresearch/fairseq/tree/a54021305d6b3c4c5959ac9395135f63202db8f1)
+
 ```sh
 pip install -r requirements.txt
 ```
