@@ -50,12 +50,22 @@ Wav list corresponding to the source datasets can be found here :
 ```sh 
    dataset/wav_lists
 ```
+We also provide the corresponding real data for convenience. It can be downloaded using the following command:
 
+```bash 
+gsutil cp -r https://storage.cloud.google.com/ssd_in_the_wild/real-data dataset/
+```
 ## Downloading the pre-trained models 
-
+Pre-trained models can be downloaded as follows:
 ```bash 
 gsutil cp -r https://storage.cloud.google.com/ssd_in_the_wild/pre-trained-models/ models/pre-trained/
 ```
+You can also download individual models based on the below folder structure
+Example, to download ``hifigan.pt``:
+```bash 
+gsutil cp https://storage.cloud.google.com/ssd_in_the_wild/pre-trained-models/5_experiments/5.1_sst_train/single_vocoder/hifigan.pt models/pre-trained/hifigan.pt
+```
+Folder structure:
 ```plaintext
 pre-trained-models/
 │
@@ -92,52 +102,22 @@ pip install -r requirements.txt
 ```
 Download xlsr model from [here](https://github.com/facebookresearch/fairseq/tree/main/examples/wav2vec/xlsr) and add in /synthetic_speech_detection/SSL_Anti-spoofing/model.py
 
-
-**Evaluation:**
-
 ```sh
-python train.py --eval \
-    --test_score_dir <path_to_save_scores> \
-    --model_name SSL-AASIST \
-    --test_list_path <path_to_test_file_with_utterances_and_labels> \
-    --model_path <path_to_model_checkpoint>
+conda activate SSL 
 ```
-### Section 3 
+**Prepare the data**
 
-Prepare the data 
-- Download In-the-Wild dataset from [here](https://owncloud.fraunhofer.de/index.php/s/JZgXh0JEAF0elxa) 
 - Create evaluation file of the format :
 ```sh 
    <real_audio_path> bonafide 
    <synthetic_audio_path> spoof
 ```
-
 - `bonafide` represents genuine audio.
 - `spoof` represents synthetic or fake audio.
 
-
-Download the pre-trained model 
-
-```bash 
-gsutil cp -r https://storage.cloud.google.com/ssd_in_the_wild/pre-trained-models/5_experiments/5.1_sst_train/single_vocoder/hifigan.pth synthetic_speech_detection/pre-trained
-```
-
-```bash 
-gsutil cp -r https://storage.cloud.google.com/ssd_in_the_wild/pre-trained-models/5_experiments/5.2_data-aug/hfg_aug2.pth synthetic_speech_detection/pre-trained
-```
-
-
-Evaluate the above downloaded models
-
+The helper script for creating the evaluation file is ``prepare_test.py``. See below for an example usage:
 ```sh
-conda activate SSL
-```
-```sh
-python train.py --eval \
-    --test_score_dir <path_to_save_scores> \
-    --model_name SSL-AASIST \
-    --test_list_path <path_to_test_file_with_utterances_and_labels> \
-    --model_path <path_to_downloaded_model>
+dataset/prepare_test.py --bona_dir dataset/real-data/jsut --spoof_dir dataset/Shiftyspeech/Vocoders/bigvgan/jsut_flac --save_path dataset/test_files/bigvgan_jsut_test.txt
 ```
 
 ## **Synthetic speech detection system**
