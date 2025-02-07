@@ -1,3 +1,5 @@
+This is the official repo of *ShiftySpeech*
+
 ## Downloading the dataset 
 
 ### ShiftySpeech
