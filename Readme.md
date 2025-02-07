@@ -189,6 +189,54 @@ For vocoder systems not included in WaveFake dataset, we release the generated s
 ``
 Trained models can then be evaluated on distribution shifts similar to above experiments
 
+**Training on Vocoded speech vs training on TTS speech**
+In previous experiments we train detection systems by using vocoders as the only source of synthetic speech generation. Here, we train the detection system with synthetic speech generated using end-to-end TTS systems. For this experiment, we train detectors using following systems as the source of generation:
+- Grad-TTS 
+- VITS
+- Glow-TTS
+- HFG Vocoded 
+- Combination of above
+
+Note: Vocoder utilized during synthesis for TTS systems is HiFiGAN (HFG). All the systems utilized are trained on LJSpeech.
+Above TTS systems can be downloaded as part of coqui-ai repository. Please follow coqui-ai [Readme](https://github.com/Ashigarg123/ShiftySpeech/tree/main/speech_synthesis/tts/TTS#readme) for more instructions. Below we list the models used for synthesis:
+
+```sh
+tts = TTS("tts_models/en/ljspeech/glow-tts", gpu=True,  vocoder_path="vocoder_models/en/ljspeech/hifigan_v2")
+```
+```sh
+tts = TTS("tts_models/en/ljspeech/vits", gpu=True, vocoder_path="vocoder_models/en/ljspeech/hifigan_v2")
+```
+Grad-TTS can be used to synthesize speech using the following command:
+```sh
+python inference.py -f <path_to_transcripts> -c speech_synthesis/tts/Grad-TTS/checkpts/grad-tts.pt
+```
+Example format for transcripts:
+```sh
+Printing, in the only sense with which we are at present concerned, differs from most if not from all the arts and crafts represented in the Exhibition|LJ001-0001.wav
+```
+HiFiGAN model utilized is derived from [Hugging Face](https://huggingface.co/speechbrain/tts-hifigan-ljspeech)
+
+Train, test and dev splits for LJSpeech are same as defined above for previous experiments. Trained models can then be evaluated on synthesized test set of above TTS and vocoder systems
+
+**Language distribution shift**
+Here, we train detection systems on English corpus and evaluate on Chinese corpus and vice-versa. We utilize VCTK as the source corpus for English and AISHELL-1 corpus for Chinese. Multi-lingual XTTS system is used for generation. It can be loaded from coqui-ai as:
+```sh
+tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=True)
+```
+
+Wav list for training can be found in : ``dataset/train_wav_list``
+Trained detectors can then be evaluated on test set of AISHELL-1 corpus and JSUT basic5000 corpus generated using XTTS
+
+Please note that for a given sample audio, source speaker from original audio is used as reference, example: 
+```sh
+  tts.tts_to_file(text=txt,
+                    file_path=save_pth,
+                    speaker= source_speaker,
+                    language="ja",
+                    split_sentences=False
+                    )
+```
+
 ## **Synthetic speech detection system**
 This repository utilizes [SSL-AASIST](https://arxiv.org/abs/2202.12233) model for spoof speech detection. Implementation is derived from [official](https://github.com/TakHemlata/SSL_Anti-spoofing) GitHub repository. 
 
