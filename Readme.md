@@ -121,7 +121,7 @@ The helper script for creating the evaluation file is ``prepare_test.py``. See b
 ```sh
 dataset/prepare_test.py --bona_dir dataset/real-data/jsut --spoof_dir dataset/Shiftyspeech/Vocoders/bigvgan/jsut_flac --save_path dataset/test_files/bigvgan_jsut_test.txt
 ```
-**Evaluating In-the-Wild**
+🚀**Evaluating In-the-Wild**
 - Download In-the-Wild dataset from [here](https://owncloud.fraunhofer.de/index.php/s/JZgXh0JEAF0elxa) and create the evaluation file in the above format
 - Evaluate the model trained on HiFiGAN generated utterances with and without augmentations
 Download pre-trained models:
@@ -159,7 +159,8 @@ python train.py --eval \
     --test_list_path dataset/test_files/bigvgan_jsut.txt \
     --model_path models/pre-trained/hifigan.pt>
 ```
-**Training on more speakers** 
+🗣️**Training on more speakers** 
+
 We analyze the impact of training a detector on single speaker vs training on multiple speakers. Number of speakers in training vary from 1 to 10. 
 We release pre-trained models for models trained on single-speaker and four speakers. Training data used is LibriTTS. Five different models are trained for both single and multi-speaker experiment. Speakers are randomly selected. 
 
@@ -182,6 +183,7 @@ python train.py --eval \
 ```
 
 **Newly released vocoder** 
+
 Now, we include new vocoders in training in chronological order of release. 
 For vocoder systems not included in WaveFake dataset, we release the generated samples for training and can be downloaded from folder -- ``https://storage.cloud.google.com/ssd_in_the_wild/flac_version/ShiftySpeech/Vocoders/<vocoder_of_choice>/ljspeech_flac
 ``
