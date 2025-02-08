@@ -1,4 +1,15 @@
-This is the official repo of *ShiftySpeech*
+# 🌀 ShiftySpeech: A Large-Scale Synthetic Speech Dataset with Distribution Shifts
+This is the official repository of *ShiftySpeech* – a diverse and extensive dataset containing **3000+ hours** of synthetic speech generated using various **TTS systems** and **vocoders**, while covering multiple **distribution shifts**. 
+
+## 🔥 Key Features
+- 3000+ hours of synthetic speech
+- **Diverse Distribution Shifts**: The dataset spans **7 key distribution shifts**, including:  
+  - 📖 **Reading Style**  
+  - 🎙️ **Podcast**  
+  - 🎥 **YouTube**  
+  - 🗣️ **Languages (Three different languages)**  
+  - 🌎 **Demographics (including variations in age, accent, and gender)**  
+- **Multiple Speech Generation Systems**: Includes data synthesized from various **TTS models** and **vocoders**.
 
 ## Downloading the dataset 
 
