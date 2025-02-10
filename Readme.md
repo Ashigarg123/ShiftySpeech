@@ -17,6 +17,9 @@ This is the official repository of *ShiftySpeech* – a diverse and extensive da
   - 🌎 **Demographics (including variations in age, accent, and gender)**  
 - **Multiple Speech Generation Systems**: Includes data synthesized from various **TTS models** and **vocoders**.
 
+## 💡 Why We Built This Dataset
+Driven by advances in self-supervised learning for speech, state-of-the-art synthetic speech detectors have achieved low error rates on popular benchmarks such as ASVspoof. However, prior benchmarks do not address the wide range of real-world variability in speech. Are reported error rates realistic in real-world conditions? To assess detector failure modes and robustness under controlled distribution shifts, we introduce *ShiftySpeech*, a benchmark with more than 3000 hours of synthetic speech from 7 domains, 6 TTS systems, 12 vocoders, and 3 languages.
+
 ## Downloading the dataset 
 
 ### ShiftySpeech
