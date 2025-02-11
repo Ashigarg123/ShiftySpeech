@@ -169,7 +169,9 @@ python train.py --trn_list_path <path_to_train_file> \
                 --save_path <path_to_save_checkpoint> 
 ```
 For the following experiments, create the evaluation files for all distribution shifts as mentioned in ``Prepare the data`` section 
+
 **Impact of Synthetic Speech Selection** 
+
 Here, we study the impact of training on single vocoder vs multiple-vocoder systems. In addition, we analyze the effect of training on one vocoder vs the other. 
 - Load the pre-trained model saved in ``models/pre-trained``
 
