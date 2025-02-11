@@ -1,6 +1,8 @@
+<p align="center">
   <a href="https://github.com/Ashigarg123/ShiftySpeech">
-    <img src="https://github.com/Ashigarg123/ShiftySpeech/blob/main/Images/shiftyspeech_logo.png" alt="ShiftySpeech Logo" width="400" height="auto">
+    <img src="https://github.com/Ashigarg123/ShiftySpeech/blob/main/Images/shiftyspeech_logo.png" alt="ShiftySpeech Logo" width="500" height="auto">
   </a>
+</p>
 
 # 🌀 *ShiftySpeech*: A Large-Scale Synthetic Speech Dataset with Distribution Shifts
 This is the official repository of *ShiftySpeech* – a diverse and extensive dataset containing **3000+ hours** of synthetic speech generated using various **TTS systems** and **vocoders**, while covering multiple **distribution shifts**. 
