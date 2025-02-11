@@ -214,6 +214,7 @@ For vocoder systems not included in WaveFake dataset, we release the generated s
 Trained models can then be evaluated on distribution shifts similar to above experiments
 
 **Training on Vocoded speech vs training on TTS speech**
+
 In previous experiments we train detection systems by using vocoders as the only source of synthetic speech generation. Here, we train the detection system with synthetic speech generated using end-to-end TTS systems. For this experiment, we train detectors using following systems as the source of generation:
 - Grad-TTS 
 - VITS
@@ -243,6 +244,7 @@ HiFiGAN model utilized is derived from [Hugging Face](https://huggingface.co/spe
 Train, test and dev splits for LJSpeech are same as defined above for previous experiments. Trained models can then be evaluated on synthesized test set of above TTS and vocoder systems
 
 **Language distribution shift**
+
 Here, we train detection systems on English corpus and evaluate on Chinese corpus and vice-versa. We utilize VCTK as the source corpus for English and AISHELL-1 corpus for Chinese. Multi-lingual XTTS system is used for generation. It can be loaded from coqui-ai as:
 ```sh
 tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=True)
