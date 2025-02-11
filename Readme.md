@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/Ashigarg123/ShiftySpeech">
-    <img src="https://github.com/Ashigarg123/ShiftySpeech/blob/main/Images/logo-png.png" alt="ShiftySpeech Logo" width="280">
+    <img src="https://github.com/Ashigarg123/ShiftySpeech/blob/main/Images/shiftyspeech_logo.png" alt="ShiftySpeech Logo" width="280" height="auto">
   </a>
 </p>
 
@@ -281,3 +281,24 @@ This section lists TTS and vocoder models used in this repository
 ### **FAQ ❓** 
 
 Please feel free to reach out if you have any questions or comments about the resource using GitHub issues or contacting us via email at [agarg22@jhu.edu](mailto:agarg22@jhu.edu) or [noa@cs.jhu.edu](mailto:noa@cs.jhu.edu).
+
+### **Citation
+
+If you find this dataset or repository useful, please cite our work:
+```bibtex
+@misc{garg2025syntheticspeechdetectionwild,
+      title={Less is More for Synthetic Speech Detection in the Wild}, 
+      author={Ashi Garg and Zexin Cai and Henry Li Xinyuan and Leibny Paola García-Perera and Kevin Duh and Sanjeev Khudanpur and Matthew Wiesner and Nicholas Andrews},
+      year={2025},
+      eprint={2502.05674},
+      archivePrefix={arXiv},
+      primaryClass={eess.AS},
+      url={https://arxiv.org/abs/2502.05674}, 
+}
+```
+## Acknowledgment
+This work was supported by the Office of the Director of National Intelligence (ODNI), Intelligence Advanced Research Projects Activity (IARPA), via the ARTS Program under contract D2023-2308110001. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies, either expressed or implied, of ODNI, IARPA, or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for governmental purposes notwithstanding any copyright annotation therein.
+
+We thank Rafael Rivera-Soto, Rachel Wicks and Andrew Wang for their valuable discussions and feedback, which contributed to this work.
+
+
