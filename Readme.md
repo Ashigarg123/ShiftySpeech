@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/Ashigarg123/ShiftySpeech">
-    <img src="https://github.com/Ashigarg123/ShiftySpeech/blob/main/Images/shiftyspeech_logo.png" alt="ShiftySpeech Logo" width="280" height="auto">
+    <img src="https://github.com/Ashigarg123/ShiftySpeech/blob/main/Images/shiftyspeech_logo.png" alt="ShiftySpeech Logo" width="auto" height="auto">
   </a>
 </p>
 
@@ -282,7 +282,7 @@ This section lists TTS and vocoder models used in this repository
 
 Please feel free to reach out if you have any questions or comments about the resource using GitHub issues or contacting us via email at [agarg22@jhu.edu](mailto:agarg22@jhu.edu) or [noa@cs.jhu.edu](mailto:noa@cs.jhu.edu).
 
-### **Citation
+### **Citation**
 
 If you find this dataset or repository useful, please cite our work:
 ```bibtex
