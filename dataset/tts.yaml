@@ -1,0 +1,17 @@
+FastPitch:
+  - VCTK
+Glow-TTS:
+  - AISHELL-dev
+Grad-TTS:
+  - LJSpeech
+VITS:
+  - VCTK
+  - LJSpeech
+XTTS:
+  - VCTK
+  - AISHELL-dev
+  - AISHELL-test
+  - AISHELL-train
+  - JSUT
+YourTTS:
+  - VCTK
