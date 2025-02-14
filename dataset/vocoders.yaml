@@ -1,0 +1,104 @@
+apnet2:
+  - aishell
+  - audiobook
+  - jsut
+  - podcast
+  - voxceleb_test
+  - youtube
+bivgan:
+  - aishell
+  - audiobook
+  - commonvoice
+  - jsut
+  - ljspeech
+  - podcast
+  - voxceleb_test
+  - youtube
+bigvsan:
+  - aishell
+  - audiobook
+  - commonvoice
+  - jsut
+  - ljspeech
+  - podcast
+  - voxceleb_test
+hifigan:
+  - aishell
+  - audiobook
+  - commonvoice
+  - jsut
+  - podcast
+  - train-clean-360
+  - voxceleb_test
+  - youtube
+mb-melgan:
+  - aishell
+  - audiobook
+  - commonvoice
+  - jsut
+  - podcast
+  - train-clean-360
+  - voxceleb_test
+  - youtube
+pwg:
+  - aishell
+  - audiobook
+  - commonvoice
+  - jsut
+  - ljspeech
+  - podcast
+  - train-clean-360
+  - voxceleb_test
+  - youtube
+style-melgan:
+  - aishell
+  - audiobook
+  - commonvoice
+  - jsut
+  - ljspeech
+  - podcast
+  - train-clean-360
+  - voxceleb_test
+  - youtube
+univnet-c16:
+  - aishell
+  - audiobook
+  - commonvoice
+  - jsut
+  - ljspeech
+  - podcast
+  - voxceleb_test
+univnet-c32:
+  - aishell
+  - audiobook
+  - commonvoice
+  - jsut
+  - ljspeech
+  - podcast
+  - voxceleb_test
+  - youtube
+vocos:
+  - aishell
+  - audiobook
+  - commonvoice
+  - jsut
+  - ljspeech
+  - podcast
+  - voxceleb_test
+  - youtube
+wavegrad:
+  - aishell
+  - audiobook
+  - jsut
+  - ljspeech
+  - podcast
+  - voxceleb_test
+  - youtube
+istftnet:
+  - aishell
+  - audiobook
+  - jsut
+  - ljspeech
+  - podcast
+  - voxceleb_test
+  - youtube
