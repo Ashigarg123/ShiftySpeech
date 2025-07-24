@@ -307,9 +307,9 @@ Please feel free to reach out if you have any questions or comments about the re
 
 If you find this dataset or repository useful, please cite our work:
 ```bibtex
-@misc{garg2025syntheticspeechdetectionwild,
-      title={Less is More for Synthetic Speech Detection in the Wild}, 
-      author={Ashi Garg and Zexin Cai and Henry Li Xinyuan and Leibny Paola García-Perera and Kevin Duh and Sanjeev Khudanpur and Matthew Wiesner and Nicholas Andrews},
+@misc{garg2025shiftyspeechlargescalesyntheticspeech,
+      title={ShiftySpeech: A Large-Scale Synthetic Speech Dataset with Distribution Shifts}, 
+      author={Ashi Garg and Zexin Cai and Lin Zhang and Henry Li Xinyuan and Leibny Paola García-Perera and Kevin Duh and Sanjeev Khudanpur and Matthew Wiesner and Nicholas Andrews},
       year={2025},
       eprint={2502.05674},
       archivePrefix={arXiv},
